@@ -34,8 +34,13 @@ COPY nginx.conf /etc/nginx/conf.d/documentx.conf
 # Supervisord config
 COPY supervisord.conf /etc/supervisor/conf.d/documentx.conf
 
+# Entrypoint to decode SECRETS_JSON env var
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
 WORKDIR /app/backend
 
 EXPOSE 80
 
+ENTRYPOINT ["/entrypoint.sh"]
 CMD ["supervisord", "-c", "/etc/supervisor/conf.d/documentx.conf"]

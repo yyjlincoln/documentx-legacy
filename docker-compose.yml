@@ -1,0 +1,12 @@
+services:
+  documentx:
+    build: .
+    ports:
+      - "80:80"
+    environment:
+      - SECRETS_JSON=${SECRETS_JSON}
+    volumes:
+      - documentx-cache:/etc/documentx
+
+volumes:
+  documentx-cache:
