@@ -1,8 +1,8 @@
 services:
   documentx:
     build: .
-    ports:
-      - "80:80"
+    expose:
+      - "80"
     environment:
       - SECRETS_JSON=${SECRETS_JSON}
     volumes:
