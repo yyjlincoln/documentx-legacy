@@ -7,6 +7,13 @@ services:
       - SECRETS_JSON=${SECRETS_JSON}
     volumes:
       - documentx-cache:/etc/documentx
+    networks:
+      - dokploy-network
+      - default
 
 volumes:
   documentx-cache:
+
+networks:
+  dokploy-network:
+    external: true
