@@ -38,7 +38,4 @@ WORKDIR /app/backend
 
 EXPOSE 80
 
-HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
-    CMD curl -sf http://127.0.0.1:40000/getUIColorScheme || exit 1
-
 CMD ["supervisord", "-c", "/etc/supervisor/conf.d/documentx.conf"]
