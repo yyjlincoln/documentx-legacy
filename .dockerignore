@@ -1,0 +1,8 @@
+.git
+.gitmodules
+secrets.json
+**/.git
+**/__pycache__
+**/*.pyc
+**/.vscode
+*.nogit

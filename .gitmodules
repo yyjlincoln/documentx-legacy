@@ -1,0 +1,6 @@
+[submodule "DocumentX-NG"]
+	path = DocumentX-NG
+	url = https://github.com/yyjlincoln/DocumentX-NG.git
+[submodule "DocumentX-NG-UI"]
+	path = DocumentX-NG-UI
+	url = https://github.com/yyjlincoln/DocumentX-NG-UI.git
