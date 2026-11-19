@@ -1,0 +1,11 @@
+diff --git a/Server.py b/Server.py
+index cb72782..c7f5bb3 100644
+--- a/Server.py
++++ b/Server.py
+@@ -1,6 +1,5 @@
+ from typing import Dict
+ from flask import Flask, request, jsonify, redirect, send_file, Response
+-from flask_mongoengine import MongoEngine
+ from database import AccessLog, Document, User, Policy
+ import core
+ import os

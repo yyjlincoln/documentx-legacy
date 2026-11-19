@@ -6,3 +6,4 @@ secrets.json
 **/*.pyc
 **/.vscode
 *.nogit
+**/node_modules

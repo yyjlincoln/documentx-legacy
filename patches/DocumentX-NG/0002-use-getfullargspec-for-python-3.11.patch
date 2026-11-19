@@ -1,0 +1,22 @@
+diff --git a/authlib.py b/authlib.py
+index c55b648..e600621 100644
+--- a/authlib.py
++++ b/authlib.py
+@@ -142,7 +142,7 @@ def auth(level='verify_token', kw={}):
+     HandlerArgs = {}
+ 
+     for _hand in levels[level]:
+-        Arg = inspect.getargspec(_hand)
++        Arg = inspect.getfullargspec(_hand)
+         Needed = Arg.args[:-len(Arg.defaults)] if Arg.defaults else Arg.args
+         Optional = dict(zip(
+             Arg.args[-len(Arg.defaults if Arg.defaults else []):], Arg.defaults if Arg.defaults else []))
+@@ -179,7 +179,7 @@ def authDec(level='', **kw):
+     HandlerArgs = {}
+ 
+     for _hand in levels[level]:
+-        Args = inspect.getargspec(_hand)
++        Args = inspect.getfullargspec(_hand)
+         Needed = Args.args[:-len(Args.defaults)
+                            ] if Args.defaults else Args.args
+         Optional = dict(zip(
